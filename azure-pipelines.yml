@@ -27,8 +27,8 @@ stages:
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/WebApp-ASP.Net core/terraform-manifests'
         backendServiceArm: 'Dev Test(2)(18a0e420-4ca6-47f3-ba52-2534b3c7d2c1)'
-        backendAzureRmResourceGroupName: 'terraform_rg01'
-        backendAzureRmStorageAccountName: 'terraformstate2015'
+        backendAzureRmResourceGroupName: 'YAMLDEV01'
+        backendAzureRmStorageAccountName: 'terraformbackend0001'
         backendAzureRmContainerName: 'tfcontainer01'
         backendAzureRmKey: 'terraform.tfstate'
 
