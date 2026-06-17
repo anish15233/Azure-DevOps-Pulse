@@ -37,5 +37,9 @@ stages:
         provider: 'azurerm'
         command: 'apply'
         environmentServiceNameAzureRM: 'Shyam_Japnaam'
-          
+    - task: TerraformTask@5
+      inputs:
+        provider: 'azurerm'
+        command: 'destroy'
+        environmentServiceNameAzureRM: 'Shyam_Japnaam'
 
