@@ -17,10 +17,12 @@ stages:
       displayName: Terraform installer
       inputs:
         terraformVersion: 'latest'
+    
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
         command: 'init'
+        backendServiceArm: 'Shyam_Japnaam'
         backendAzureRmResourceGroupName: 'Shyam_naam_karega_raushan'
         backendAzureRmStorageAccountName: 'shyamjapnaam'
         backendAzureRmContainerName: 'shyamcontainer'
@@ -28,9 +30,12 @@ stages:
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
-        command: 'validate'
+        command: 'plan'
+        environmentServiceNameAzureRM: 'Shyam_Japnaam'
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
         command: 'apply'
         environmentServiceNameAzureRM: 'Shyam_Japnaam'
+          
+
